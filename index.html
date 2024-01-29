@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #39adfe;
+        padding-top: 200px;
+      }
+
+      button {
+        margin-left: 340px;
+        width: 270px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: #024da5;
+        color: white;
+        font-size: 26px;
+        font-weight: bolder;
+        border: none;
+        box-shadow: 1px 1px 30px rgb(56, 56, 56);
+        margin-top: 20px;
+      }
+      label {
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+       
+      }
+    
+    </style>
+  </head>
+  <body>
+    <label id="zero">0</label>
+    <button id="plus">Increase</button>
+    <button id="decrease">Deacrese</button>
+    <button id="reset">Reset</button>
+    <script>
+      let count = 0;
+      document.getElementById("plus").addEventListener("click", function () {
+        count += 1;
+        document.getElementById("zero").innerHTML = count;
+      });
+
+      document.getElementById('decrease').addEventListener('click', function () {
+        count-=1;
+        document.getElementById('zero').innerHTML = count;
+      });
+      document.getElementById('reset').addEventListener('click', function (){
+        count=0;
+        document.getElementById('zero').innerHTML = count;
+      });
+    </script>
+  </body>
+</html>
